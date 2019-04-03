@@ -1,0 +1,120 @@
+.main{
+    .container{
+        .ad{
+            width: 70%;
+            margin:auto;
+            height:320px;
+            padding-top:90px;
+            position: relative;
+            span{
+                position: absolute;
+                top: 95px;
+                right: 20px;
+                font-size: 30px;
+                color:brown;
+            }
+        }
+        .content_main{
+            margin-top:30px;
+            display: flex;
+            justify-content: space-between;
+            .left{
+                flex-basis: 67%;
+                //NGHE GÌ HÔM NAY
+                .list-today{
+                    .item1{
+                        width:140px;
+                        >span{
+                            font-size:14px;
+                        }
+                        .hover-item1{
+                            p{
+                                font-size:45px;
+                            }
+                        }
+                    }
+                }
+                //MV HOT
+                .list-MV{
+                    .itemMV{
+                        width:380px;
+                        >span{
+                            font-size:14px;
+                        }
+                        .hover-itemMV{
+                            font-size:70px;
+                            height:99%;
+                        }
+                        .times{
+                            position: absolute;
+                            bottom:4px;
+                            right:0px;
+                            padding:5px 10px;
+                            background:rgba(0,0,0,0.6);
+                            color:white;
+                        }
+                        .text{
+                            position: absolute;
+                            bottom:4px;
+                            left:10px;
+                            padding:5px 10px;
+                            color:white;
+                            span{
+                                a{
+                                    font-size:12px;
+                                    color:#9a9a9a;
+                                }
+                                &:hover{
+                                    a{
+                                        color:#2daaed;
+                                    }
+                                }
+                            }
+                            p{
+                                a{
+                                    font-size:17px;
+                                    color:white;
+                                }
+                                &:hover{
+                                    a{
+                                        color:#2daaed;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            >.text{
+                                p{
+                                    a{
+                                        color:#0689ba;
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    .itemMV1{
+                        width: 182px;
+                        .hover-itemMV1{
+                            font-size:50px;
+                        }
+                        >span{
+                            font-size:12px;
+                        }
+                        .times{
+                            position: absolute;
+                            bottom:4px;
+                            right:0px;
+                            padding:5px 10px;
+                            background:rgba(0,0,0,0.6);
+                            color:white;
+                        }
+                    }
+                }
+            }
+            .right{
+                flex-basis: 30%;
+            }
+        }
+    }
+}
