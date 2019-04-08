@@ -1,9 +1,9 @@
 
 .slider{
-    margin-top:20px;
+    margin-top:15px;
         .sliderLeft{
             position: relative;
-            flex-basis: 67%;
+            flex-basis: 70%;
             .img-big{
                 width: 100%;
             }
@@ -47,13 +47,13 @@
         }
         .sliderRight{
             
-            width: 30%;
+            width: 27%;
             #owl-carousel1{
                 width: 100%;
                 position: relative;
                 .item{
                     position: relative;
-                    height:317px;
+                    height:335px;
                     img{
                         height:100%;
                     }
@@ -91,7 +91,7 @@
                 .owl-dots{
                     position: absolute;
                     bottom:-30px;
-                    left:40%;
+                    // left:40%;
                     button{
                         outline: none;
                     }

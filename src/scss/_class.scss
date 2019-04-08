@@ -12,7 +12,7 @@ img{
     align-items: center;
 }
 .p-head{
-    margin-bottom:10px;
+    margin-bottom:20px;
    a{
     color: #2582be;
     text-transform: uppercase;
@@ -24,36 +24,37 @@ img{
    }
 }
 
-
+.text-title{
+    p{
+        a{
+            color:black;
+            font-size:17px;
+        }
+        &:hover{
+            a{
+                color:#0689ba;
+            }
+        }
+    }
+    span{
+        a{
+            font-size:12px;
+            color:#9a9a9a;
+        }
+        &:hover{
+            a{
+                color:#0689ba;
+            }
+        }
+        
+    }
+}
 .list{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     .item{
         margin-bottom:20px;
-        >p{
-            a{
-                color:black;
-                font-size:14px;
-            }
-            &:hover{
-                a{
-                    color:#2daaed;
-                }
-            }
-        }
-        >span{
-            a{
-                font-size:12px;
-                color:#9a9a9a;
-            }
-            &:hover{
-                a{
-                    color:#2daaed;
-                }
-            }
-            
-        }
         .content{
             position: relative;
             .view{
@@ -97,4 +98,48 @@ img{
     
     
     
+}
+
+
+#owl-carousel1 {
+    .owl-dots{
+        right:0px !important;
+        .owl-dot{
+            &:last-child{
+                margin:0;
+            }
+            width: 15px;
+            height:15px;
+            border-radius: 50%;
+            border:1px solid gray;
+            background: none;
+            margin-right: 10px;
+            position: relative;
+            &.active{
+                background: none !important;
+                &:after{
+                    background: turquoise;
+                }
+            }
+            span{
+                display:none;
+            }
+            &:after{
+                content:'';
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                width: 60%;
+                height:60%;
+                
+                border-radius: 50%;
+            }
+            &:hover{
+                &:after{
+                    background: turquoise;
+                }
+            }
+        }
+    }
 }
