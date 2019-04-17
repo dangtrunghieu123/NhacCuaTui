@@ -6,7 +6,7 @@ body {
   box-sizing: border-box; }
 
 .container {
-  width: 87%;
+  max-width: 1170px;
   margin: auto; }
 
 img {
@@ -143,35 +143,69 @@ img {
             color: #333; }
             #header .container .list > ul > li .menu-hover ul li a:hover {
               color: #2daaed; }
-      #header .container .list > ul > li:hover {
+      #header .container .list > ul > li:hover a {
         color: #2f80ed; }
-        #header .container .list > ul > li:hover .menu-hover {
-          display: flex;
-          justify-content: space-between; }
+      #header .container .list > ul > li:hover .menu-hover {
+        display: flex;
+        justify-content: space-between; }
       #header .container .list > ul > li .the_video {
         width: 600px; }
       #header .container .list > ul > li .the_BXH {
         width: 150px; }
       #header .container .list > ul > li .the_unknow {
         width: 200px; }
-    #header .container .list > ul > li:last-child a {
-      margin-bottom: 10px;
-      color: blue; }
-  #header .container .list-icon ul li {
-    width: 20px;
-    height: 20px;
-    margin: 2px 22px 0 0; }
-  #header .container .list-icon ul li:first-child {
-    width: 40px;
-    height: 40px; }
+    #header .container .list > ul > li:last-child {
+      padding: 26px 16px 26px 0; }
+      #header .container .list > ul > li:last-child a {
+        display: flex; }
+        #header .container .list > ul > li:last-child a span {
+          width: 5px;
+          height: 5px;
+          margin-right: 5px;
+          background: black;
+          border-radius: 50%; }
+      #header .container .list > ul > li:last-child:hover a span {
+        background: #2daaed; }
+  #header .container .list-icon > ul > li {
+    margin: 2px 25px 0 0;
+    position: relative; }
+    #header .container .list-icon > ul > li:first-child {
+      padding: 6px 0; }
+    #header .container .list-icon > ul > li .menu-hover {
+      display: none;
+      position: absolute;
+      border: 1px solid #d9d9d9;
+      top: 100%;
+      left: 0;
+      width: 200px;
+      padding: 15px;
+      box-shadow: 0 3px 8px rgba(3, 3, 3, 0.26);
+      background: #fff; }
+      #header .container .list-icon > ul > li .menu-hover ul {
+        width: 100%; }
+        #header .container .list-icon > ul > li .menu-hover ul li {
+          border-bottom: 1px solid #d9d9d9;
+          line-height: 20px;
+          padding: 8px; }
+          #header .container .list-icon > ul > li .menu-hover ul li a {
+            color: black; }
+          #header .container .list-icon > ul > li .menu-hover ul li:last-child {
+            border: none; }
+          #header .container .list-icon > ul > li .menu-hover ul li:hover a {
+            color: #2f80ed; }
+    #header .container .list-icon > ul > li:hover .menu-hover {
+      display: flex;
+      justify-content: space-between; }
   #header .container .form .form-group input {
     color: #888888;
     font-size: 14px;
-    width: 200px;
+    width: 230px;
     height: 40px;
     border: 1px solid #2f80ed;
     padding: 0 9px;
     -webkit-border-radius: 4px 0 0 4px; }
+    #header .container .form .form-group input:focus .menu-hover {
+      display: block; }
   #header .container .form .form-group button {
     width: 40px;
     height: 40px;
@@ -181,6 +215,8 @@ img {
     background: linear-gradient(to right, #2f82ed 0%, #00afef 100%); }
     #header .container .form .form-group button img {
       padding: 8px; }
+  #header .container .form .form-group .menu-hover {
+    display: none; }
 
 .slider {
   margin-top: 15px; }
@@ -465,19 +501,19 @@ img {
           .main .container .content_main .right .list-BXHMV .list-tabss ul li:last-child a {
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px; }
-      .main .container .content_main .right .list-BXHMV .list-tabss .tab-content {
+      .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents {
         position: relative; }
-        .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab {
+        .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs {
           position: absolute;
           top: 0;
           left: 0;
           display: none;
           width: 100%; }
-          .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab.active {
+          .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs.active {
             display: block; }
-          .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .big-item {
+          .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .big-item {
             position: relative; }
-            .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .big-item::after {
+            .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .big-item::after {
               content: '';
               position: absolute;
               bottom: -8px;
@@ -485,22 +521,22 @@ img {
               background: #ececec;
               width: 100%;
               height: 1px; }
-            .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .big-item .text-bxhMV {
+            .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .big-item .text-bxhMV {
               z-index: 2;
               display: flex;
               position: absolute;
               bottom: 4px;
               left: 0;
               font-size: 15px; }
-              .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .big-item .text-bxhMV > p {
+              .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .big-item .text-bxhMV > p {
                 padding: 2px 18px;
                 background: red;
                 margin-right: 20px;
                 color: white;
                 font-size: 40px; }
-          .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .img-bxhMV {
+          .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .img-bxhMV {
             position: relative; }
-            .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .img-bxhMV .overlay-bxhMV {
+            .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .img-bxhMV .overlay-bxhMV {
               z-index: 1;
               position: absolute;
               top: 0;
@@ -509,7 +545,7 @@ img {
               width: 100%;
               background: rgba(0, 0, 0, 0.2);
               display: none; }
-              .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .img-bxhMV .overlay-bxhMV p {
+              .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .img-bxhMV .overlay-bxhMV p {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -517,16 +553,16 @@ img {
                 font-size: 20px;
                 font-weight: 100;
                 color: white; }
-            .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .img-bxhMV:hover .overlay-bxhMV {
+            .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .img-bxhMV:hover .overlay-bxhMV {
               display: block; }
-            .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .img-bxhMV:hover .img-bxhMV .text-bxhMV .text-title p a {
+            .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .img-bxhMV:hover .img-bxhMV .text-bxhMV .text-title p a {
               color: #0689ba; }
-          .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .item {
+          .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .item {
             margin-top: 18px;
             position: relative;
             display: flex;
             align-items: center; }
-            .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .item::after {
+            .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .item::after {
               content: '';
               position: absolute;
               bottom: -12px;
@@ -534,12 +570,12 @@ img {
               background: #ececec;
               width: 100%;
               height: 1px; }
-            .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .item .item-img {
+            .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .item .item-img {
               flex-basis: 31%;
               margin-right: 20px;
               height: 62px;
               position: relative; }
-              .main .container .content_main .right .list-BXHMV .list-tabss .tab-content .tab .item .item-img > p {
+              .main .container .content_main .right .list-BXHMV .list-tabss .tab-contents .tabs .item .item-img > p {
                 z-index: 2;
                 position: absolute;
                 bottom: 0;

@@ -55,7 +55,10 @@
                         }
                     }
                     &:hover{
-                        color:#2f80ed;
+                        
+                        a{
+                            color:#2f80ed;
+                        }
                         .menu-hover{
                             display: flex;
                             justify-content: space-between;
@@ -73,10 +76,23 @@
                     }
                 }
                 >li:last-child{
+                    padding: 26px 16px 26px 0;
                     a{
-                        // font-size:30px;
-                        margin-bottom:10px;
-                        color:blue;
+                        display:flex;
+                        span{
+                            width:5px;
+                            height:5px;
+                            margin-right:5px;
+                            background:black;
+                            border-radius:50%;
+                        }
+                    }
+                    &:hover{
+                        a{
+                            span{
+                                background: #2daaed;
+                            }
+                        }
                     }
                 }
                
@@ -84,17 +100,53 @@
         }
         .list-icon{
             
-            ul{
+            >ul{
                
-                li{
-                    
-                    width: 20px;
-                    height: 20px;
-                    margin: 2px 22px 0 0;
-                }
-                li:first-child{
-                    width: 40px;
-                    height:40px;
+                >li{
+                    &:first-child{
+                        padding:6px 0;
+
+                    }
+                    margin: 2px 25px 0 0;
+                    position: relative;
+                    .menu-hover{
+                        display: none;
+                        position: absolute;
+                        border: 1px solid #d9d9d9;
+                        top:100%;
+                        left:0;
+                        width: 200px;
+                        padding: 15px;
+                        box-shadow: 0 3px 8px rgba(3,3,3,0.26);
+                        background: #fff;
+                        ul{
+                            width:100%;
+                            li{
+                                a{
+                                    color:black;
+                                }
+                                border-bottom:1px solid #d9d9d9;
+                                &:last-child{
+                                    border:none;
+                                }
+                                &:hover{
+                                    a{
+                                        color:#2f80ed;
+                                    }
+                                }
+                                line-height: 20px;
+                                padding:8px;
+                            }
+                        }
+                    }
+                    &:hover{
+                        
+                        .menu-hover{
+                            display: flex;
+                            justify-content: space-between;
+
+                        }
+                    }
                 }
             }
         }
@@ -103,11 +155,16 @@
                 input{
                     color: #888888;
                     font-size: 14px;
-                    width: 200px;
+                    width: 230px;
                     height: 40px;
                     border: 1px solid #2f80ed;
                     padding: 0 9px;
                     -webkit-border-radius: 4px 0 0 4px;
+                    &:focus{
+                        .menu-hover {
+                            display:block;
+                        }
+                    }
                 }
                 button{
                     width: 40px;
@@ -119,6 +176,9 @@
                     img{
                         padding:8px;
                     }
+                }
+                .menu-hover {
+                    display:none;
                 }
             }
         }

@@ -55,10 +55,10 @@ $(document).ready(function () {
         $(this).find('a').addClass('active');
         console.log($(this).index());//index() lấy vị trí của phần tử
         var index = $(this).index();
-        $('.tab-content .tab').hide();
+        $('.tab-contents .tabs').hide();
         // $('.tab-content .tab').eq(index).removeClass('active');
         // $('.tab-content .tab').eq(index).addClass('active');
-        $('.tab-content .tab').eq(index).show();
+        $('.tab-contents .tabs').eq(index).show();
     });
 
     $('#owl-carousel2').owlCarousel({
